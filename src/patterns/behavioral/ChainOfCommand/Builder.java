@@ -12,10 +12,10 @@ public abstract class Builder {
      * */
     public abstract boolean IBuild();
 
-    public void build(){
+    void build(){
         boolean toBeContinued = IBuild();
         if (toBeContinued && this.next != null){
             this.next.build();
         }
-    };
+    }
 }
